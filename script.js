@@ -103,22 +103,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const currentTheme = localStorage.getItem('theme');
 
-  if (currentTheme === 'light') {
-    document.body.setAttribute('data-theme', 'light');
+  if (currentTheme === 'dark') {
+    document.body.setAttribute('data-theme', 'dark');
     themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
   }
 
   themeToggleBtn.addEventListener('click', () => {
-    if (document.body.getAttribute('data-theme') === 'light') {
+    if (document.body.getAttribute('data-theme') === 'dark') {
       document.body.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'dark');
-      themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      showToast('Switched to Dark Mode');
-    } else {
-      document.body.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
-      themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      themeToggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
       showToast('Switched to Light Mode');
+    } else {
+      document.body.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      showToast('Switched to Dark Mode');
     }
   });
 
