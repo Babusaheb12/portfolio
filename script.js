@@ -170,6 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Salvaging App",
       badge: "Play Store",
       image: "images/salvaging_app.png",
+      images: [
+        { src: "images/salvaging/salvaingLogin_page.webp", alt: "Salvaging app login screen" },
+        { src: "images/salvaging/byItems.webp", alt: "Salvaging app browse items screen" },
+        { src: "images/salvaging/unnamed.webp", alt: "Salvaging app marketplace screen" },
+        { src: "images/salvaging/unnamed (1).webp", alt: "Salvaging app product details screen" }
+      ],
       description: "Marketplace for leftover and surplus construction materials. Connects contractors, suppliers, and individuals to buy and sell excess building inventory, reducing landfill waste and optimizing construction budgets.",
       highlights: [
         "Real-time product catalog & geolocation search",
@@ -311,6 +317,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <span style="padding:0.2rem 0.6rem; background:rgba(56,189,248,0.15); border:1px solid var(--primary); border-radius:4px; font-size:0.75rem; font-family:var(--font-mono); color:var(--primary);">${data.badge}</span>
         </div>
         <h2 style="font-size:1.8rem; font-weight:800; color:var(--text-main); margin-bottom:1rem;">${data.title}</h2>
+        ${data.images ? `<div class="modal-image-gallery" aria-label="${data.title} app screens">
+          ${data.images.map(image => `<img src="${image.src}" alt="${image.alt}" loading="lazy">`).join('')}
+        </div>` : ''}
         <p style="color:var(--text-muted); font-size:0.98rem; line-height:1.6; margin-bottom:1.4rem;">${data.description}</p>
         
         <h4 style="color:var(--primary); margin-bottom:0.6rem;">Key Features & Architecture:</h4>
@@ -403,7 +412,7 @@ Babu Saheb is ready to join your engineering team! 🎉
 `
   };
 
-  terminalForm.addEventListener('submit', (e) => {
+  if (terminalForm) terminalForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const cmdInput = terminalInput.value.trim().toLowerCase();
     terminalInput.value = '';
