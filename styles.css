@@ -1408,3 +1408,24 @@ body {
   .code-body { overflow-x: auto; }
   .toast { left: 1rem; right: 1rem; bottom: 1rem; }
 }
+
+/* Keep the hero in one column on tablets and phones. These rules follow the
+   visual-refresh desktop rules, so they cannot be overridden by them. */
+@media (max-width: 992px) {
+  body { overflow-x: hidden; }
+  .hero { min-height: auto; padding: 118px 0 4rem; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
+  .hero-content, .hero-card-wrapper { min-width: 0; width: 100%; }
+  .hero-description { max-width: 650px; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding-top: 105px; }
+  .hero-grid { gap: 2.5rem; }
+  .hero-title { font-size: clamp(3rem, 15vw, 4rem); }
+  .hero-badge { max-width: 100%; font-size: .78rem; line-height: 1.45; }
+  .hero-buttons { align-items: stretch; }
+  .hero-buttons .btn-primary, .hero-buttons .btn-secondary { justify-content: center; }
+  .hero-code-card { transform: none; }
+  .code-body { padding: 1.2rem; font-size: .72rem; }
+}
