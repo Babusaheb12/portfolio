@@ -394,14 +394,42 @@
 
       <!-- Project Category Filters -->
       <div class="skills-filter" style="margin-bottom:2.5rem;">
-        <button class="filter-btn active" data-pfilter="all">All Projects (9)</button>
+        <button class="filter-btn active" data-pfilter="all">All Projects (10)</button>
         <button class="filter-btn" data-pfilter="mobile">📱 Mobile Apps</button>
         <button class="filter-btn" data-pfilter="web">🟢 Web & Backend</button>
         <button class="filter-btn" data-pfilter="realtime">⚡ AI & Realtime</button>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: Salvaging App -->
+        <!-- Project 1: QuickMed App -->
+        <div class="project-card glass-card" data-pcat="mobile">
+          <div class="project-img-wrapper quickmed-preview">
+            <img src="images/quickmed/unnamed.webp" alt="QuickMed App" class="project-img">
+            <div class="project-overlay"></div>
+            <div class="project-badge"><i class="fa-solid fa-hospital-user"></i> Swiss Telemedicine</div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">QuickMed App</h3>
+            <p class="project-desc">European Telemedicine platform for Switzerland. Request doctor consultations in a few clicks with doctor calls within the hour, digital prescriptions, lab referrals & direct insurance billing.</p>
+            <div class="project-tech">
+              <span class="tech-pill">Flutter</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">Express.js</span>
+              <span class="tech-pill">Firebase</span>
+              <span class="tech-pill">REST API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=com.quickmed.quickmed&pcampaignid=web_share" target="_blank" rel="noopener"
+                class="link-btn"><i class="fa-brands fa-google-play"></i> Play Store</a>
+              <a href="https://apps.apple.com/ch/app/quickmed-app/id6737278009" target="_blank" rel="noopener"
+                class="link-btn"><i class="fa-brands fa-apple"></i> App Store</a>
+              <button class="link-btn open-modal-btn" data-project="quickmed"><i class="fa-solid fa-circle-info"></i>
+                Details</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Salvaging App -->
         <div class="project-card glass-card" data-pcat="mobile">
           <div class="project-img-wrapper salvaging-preview">
             <img src="images/salvaging/unnamed.webp" alt="Salvaging App" class="project-img">
@@ -656,9 +684,10 @@
         <p class="section-subtitle">A visual overview of my open-source activity and contribution history.</p>
       </div>
 
+      <!-- GitHub Contribution Snake Animation -->
       <div class="activity-graph-card">
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=BabuSaheb12&amp;bg_color=0D1117&amp;color=54D4E8&amp;line=A78BFA&amp;point=F472B6&amp;area=true&amp;hide_border=true"
-          alt="GitHub activity graph for Babu Saheb" loading="lazy">
+        <img src="https://raw.githubusercontent.com/BabuSaheb12/BabuSaheb12/output/github-contribution-grid-snake-dark.svg"
+          alt="GitHub Contribution Grid Snake for Babu Saheb" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px;">
       </div>
     </div>
   </section>
@@ -669,7 +698,7 @@
       <div class="section-header">
         <div class="section-tag"><i class="fa-brands fa-github"></i> Open Source</div>
         <h2 class="section-title">GitHub <span>Activity & Stats</span></h2>
-        <p class="section-subtitle">Live repository metrics and contribution insights from GitHub</p>
+        <p class="section-subtitle">Live repository metrics, contribution streaks and insights from GitHub</p>
       </div>
 
       <div class="github-grid">
@@ -682,6 +711,11 @@
           <img
             src="https://github-stats-extended.vercel.app/api/top-langs/?username=BabuSaheb12&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=54D4E8&text_color=E2E8F0&langs_count=8"
             alt="Top Languages" class="github-img">
+        </div>
+        <div class="github-stat-card glass-card">
+          <img
+            src="https://raw.githubusercontent.com/BabuSaheb12/BabuSaheb12/main/profile/streak.svg"
+            alt="GitHub Streak Stats" class="github-img">
         </div>
       </div>
 

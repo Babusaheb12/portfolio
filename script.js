@@ -166,6 +166,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 6. PROJECT MODAL DATA & HANDLER ---
   const projectModalData = {
+    quickmed: {
+      title: "QuickMed App",
+      badge: "Play Store & App Store",
+      image: "images/quickmed/unnamed.webp",
+      images: [
+        { src: "images/quickmed/unnamed.webp", alt: "QuickMed telemedicine consultation request screen" },
+        { src: "images/quickmed/image1.webp", alt: "QuickMed doctor call appointment screen" },
+        { src: "images/quickmed/image2.webp", alt: "QuickMed digital prescription and referral screen" },
+        { src: "images/quickmed/image3.webp", alt: "QuickMed health insurance billing screen" }
+      ],
+      description: "QuickMed is a European Telemedicine platform providing on-demand access to licensed doctors across Switzerland. Patients can request consultations in just a few clicks, receive a call from a doctor within the hour, get digital prescriptions and lab/imaging referrals via secure email, and bill directly to their Swiss health insurance company or pay out of pocket (75 CHF/consult).",
+      highlights: [
+        "On-demand doctor consultation request with call-back within 1 hour across Switzerland",
+        "Digital prescriptions & referrals for laboratory tests, imaging, and specialists delivered via secure email",
+        "Direct health insurance billing support & out-of-pocket payment options (75 CHF/consult)",
+        "Service for adults (18+) with Swiss-licensed internal medicine doctors fluent in English & local languages",
+        "Built with Flutter for cross-platform Android & iOS performance, supported by Node.js API services"
+      ],
+      stack: ["Flutter", "Dart", "Node.js", "Express.js", "Firebase", "REST API"],
+      links: [
+        { label: "Google Play Store", icon: "fa-brands fa-google-play", href: "https://play.google.com/store/apps/details?id=com.quickmed.quickmed&pcampaignid=web_share" },
+        { label: "Apple App Store", icon: "fa-brands fa-apple", href: "https://apps.apple.com/ch/app/quickmed-app/id6737278009" }
+      ]
+    },
     salvaging: {
       title: "Salvaging App",
       badge: "Play Store",
@@ -332,7 +356,9 @@ document.addEventListener('DOMContentLoaded', () => {
           ${data.stack.map(s => `<span class="tech-pill">${s}</span>`).join('')}
         </div>
 
-        ${data.link !== '#' ? `<a href="${data.link}" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Project / App Store</a>` : ''}
+        ${data.links ? `<div style="display:flex; flex-wrap:wrap; gap:0.75rem;">
+          ${data.links.map(l => `<a href="${l.href}" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;"><i class="${l.icon || 'fa-solid fa-arrow-up-right-from-square'}"></i> ${l.label}</a>`).join('')}
+        </div>` : (data.link && data.link !== '#' ? `<a href="${data.link}" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Project / App Store</a>` : '')}
       `;
 
       projectModal.classList.add('active');
@@ -379,15 +405,16 @@ document.addEventListener('DOMContentLoaded', () => {
 <span style="color:var(--warning);">Languages:</span> Dart, JavaScript (ES6+), TypeScript, Java, Swift, PHP, HTML5/CSS3
 `,
     projects: () => `
-1. <span style="color:var(--primary);">Salvaging App</span> - Construction materials marketplace
-2. <span style="color:var(--primary);">Real Estate App</span> - Role-based property portal
-3. <span style="color:var(--primary);">TalkUp.AI</span> - Voice AI conversation assistant
-4. <span style="color:var(--primary);">VTiCPL App</span> - Site reporting & photo upload platform
-5. <span style="color:var(--primary);">Crystal Ice App</span> - Field staff & business tracking
-6. <span style="color:var(--primary);">Vendor App</span> - Multi-vendor management platform
-7. <span style="color:var(--primary);">Fotato App</span> - Photo sharing social platform
-8. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
-9. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
+1. <span style="color:var(--primary);">QuickMed App</span> - Swiss telemedicine platform
+2. <span style="color:var(--primary);">Salvaging App</span> - Construction materials marketplace
+3. <span style="color:var(--primary);">Real Estate App</span> - Role-based property portal
+4. <span style="color:var(--primary);">TalkUp.AI</span> - Voice AI conversation assistant
+5. <span style="color:var(--primary);">VTiCPL App</span> - Site reporting & photo upload platform
+6. <span style="color:var(--primary);">Crystal Ice App</span> - Field staff & business tracking
+7. <span style="color:var(--primary);">Vendor App</span> - Multi-vendor management platform
+8. <span style="color:var(--primary);">Fotato App</span> - Photo sharing social platform
+9. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
+10. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
 `,
     experience: () => `
 💼 <span style="color:var(--primary);">Bigwon Digital Services Pvt. Ltd</span> (Jaipur) | Nov 2025 - Present
@@ -450,8 +477,14 @@ Babu Saheb is ready to join your engineering team! 🎉
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
 
-    showToast(`Thank you ${name}! Message sent successfully. Babu will get back to you shortly.`);
+    const mailtoUrl = `mailto:babusahebji4027@gmail.com?subject=${encodeURIComponent(`[Portfolio Contact] ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+    
+    window.location.href = mailtoUrl;
+    showToast(`Redirecting to email client for babusahebji4027@gmail.com...`);
     contactForm.reset();
   });
 
