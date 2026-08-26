@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     salvaging: {
       title: "Salvaging App",
-      badge: "Play Store",
+      badge: "Play Store & App Store",
       image: "images/salvaging_app.png",
       images: [
         { src: "images/salvaging/salvaingLogin_page.webp", alt: "Salvaging app login screen" },
@@ -208,11 +208,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "Built with Flutter, Node.js REST API backend, and Firebase integration"
       ],
       stack: ["Flutter", "Dart", "Node.js", "Express.js", "Firebase", "REST API"],
-      link: "https://play.google.com/store/apps/details?id=com.salvaging"
+      links: [
+        { label: "Google Play Store", icon: "fa-brands fa-google-play", href: "https://play.google.com/store/apps/details?id=com.salvaging" },
+        { label: "Apple App Store", icon: "fa-brands fa-apple", href: "https://apps.apple.com/in/app/salvaging/id6737816871" }
+      ]
     },
     realestate: {
       title: "Real Estate App",
-      badge: "Play Store",
+      badge: "Play Store & App Store",
       image: "images/real_estate_app.png",
       description: "Role-based property listing and navigation mobile app designed for seamless real estate discovery. Includes buyer, seller, and agent access levels with map integration.",
       highlights: [
@@ -222,7 +225,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "Node.js backend with Flutter client app"
       ],
       stack: ["Flutter", "Dart", "Node.js", "Firebase", "Google Maps API"],
-      link: "https://play.google.com/store/apps/details?id=com.lnh.landsandhomes"
+      links: [
+        { label: "Google Play Store", icon: "fa-brands fa-google-play", href: "https://play.google.com/store/apps/details?id=com.lnh.landsandhomes" },
+        { label: "Apple App Store", icon: "fa-brands fa-apple", href: "https://apps.apple.com/in/app/lands-homes/id6749686247" }
+      ]
     },
     talkup: {
       title: "TalkUp.AI",
