@@ -474,18 +474,51 @@ Babu Saheb is ready to join your engineering team! 🎉
   const contactForm = document.getElementById('contact-form');
   const copyEmailBtn = document.getElementById('copy-email-btn');
 
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalBtnHTML = submitBtn.innerHTML;
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    const mailtoUrl = `mailto:babusahebji4027@gmail.com?subject=${encodeURIComponent(`[Portfolio Contact] ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-    
-    window.location.href = mailtoUrl;
-    showToast(`Redirecting to email client for babusahebji4027@gmail.com...`);
-    contactForm.reset();
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/babusahebji4027@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+          _subject: `[Portfolio Inquiry] ${subject} from ${name}`
+        })
+      });
+
+      if (response.ok) {
+        showToast(`Thank you ${name}! Your message was delivered directly to babusahebji4027@gmail.com.`);
+        contactForm.reset();
+      } else {
+        showToast('Redirecting to mail client...');
+        const mailtoUrl = `mailto:babusahebji4027@gmail.com?subject=${encodeURIComponent(`[Portfolio Contact] ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        window.location.href = mailtoUrl;
+      }
+    } catch (err) {
+      showToast('Redirecting to mail client...');
+      const mailtoUrl = `mailto:babusahebji4027@gmail.com?subject=${encodeURIComponent(`[Portfolio Contact] ${subject}`)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+      window.location.href = mailtoUrl;
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
+    }
   });
 
   copyEmailBtn.addEventListener('click', () => {
