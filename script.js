@@ -172,6 +172,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- 6. PROJECT MODAL DATA & HANDLER ---
   const projectModalData = {
+    srmgroup: {
+      title: "SRM Group – Luxury Real Estate",
+      badge: "Live Website",
+      image: "images/srmgroup.jpeg",
+      images: [
+        { src: "images/srmgroup.jpeg", alt: "SRM Group luxury real estate website" },
+      ],
+      description:
+        "SRM Group is a luxury real-estate website presenting premium homes, apartments, villas, and investment opportunities across India's prime destinations.",
+      highlights: [
+        "Premium real-estate web presence for residential and investment opportunities",
+        "Clear presentation of homes, apartments, and villas",
+        "Responsive, user-friendly website experience for property discovery",
+      ],
+      stack: ["Web Development", "Responsive UI", "Real Estate"],
+      links: [
+        {
+          label: "Visit Website",
+          icon: "fa-solid fa-globe",
+          href: "https://srmhome.com/",
+        },
+      ],
+    },
+    therapysala: {
+      title: "Therapysala",
+      badge: "Google Play Store",
+      image:
+        "images/therapysala/google_play_store_feature_graphic_banner_landscape_banner_1024x500_aspect_ratio (1).png",
+      images: [
+        {
+          src: "images/therapysala/google_play_store_feature_graphic_banner_landscape_banner_1024x500_aspect_ratio (1).png",
+          alt: "Therapysala app feature graphic",
+        },
+        { src: "images/therapysala/dashboard_resized.png", alt: "Therapysala app dashboard" },
+        { src: "images/therapysala/screen_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen 2_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 2_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 3_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 4_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 5_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 6_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 7_resized.png", alt: "Therapysala app screen" },
+        { src: "images/therapysala/screen copy 8_resized.png", alt: "Therapysala app screen" },
+      ],
+      description:
+        "Therapysala is a mental wellness mobile application created to provide a clear, approachable experience for people seeking therapy and emotional support.",
+      highlights: [
+        "Thoughtful mobile experience for mental wellness and therapy discovery",
+        "Polished, accessible Flutter interface across the app journey",
+        "Production Android app published on Google Play Store",
+      ],
+      stack: ["Flutter", "Dart", "REST API"],
+      links: [
+        {
+          label: "Google Play Store",
+          icon: "fa-brands fa-google-play",
+          href: "https://play.google.com/store/apps/details?id=com.bigwon.therapyshala",
+        },
+      ],
+    },
     quickmed: {
       title: "QuickMed – Telemedicine & Online Doctor Consultation",
       badge: "Play Store & App Store",
@@ -565,18 +626,20 @@ document.addEventListener("DOMContentLoaded", () => {
 <span style="color:var(--accent);">Tools:</span> Android Studio, Xcode, Git, Postman, Figma, VS Code, Firebase Console
 `,
     projects: () => `
-1. <span style="color:var(--primary);">QuickMed App</span> - Swiss telemedicine platform
-2. <span style="color:var(--primary);">Salvaging App</span> - Construction materials marketplace
-3. <span style="color:var(--primary);">Real Estate App</span> - Role-based property portal
-4. <span style="color:var(--primary);">TalkUp.AI</span> - Voice AI conversation assistant
-5. <span style="color:var(--primary);">VTiCPL App</span> - Site reporting & photo upload platform
-6. <span style="color:var(--primary);">Crystal Ice App</span> - Field staff & business tracking
-7. <span style="color:var(--primary);">Vendor App</span> - Multi-vendor management platform
-8. <span style="color:var(--primary);">Fotato App</span> - Photo sharing social platform
-9. <span style="color:var(--primary);">OBC: ObsessedByCar</span> - Car spare parts e-commerce
-10. <span style="color:var(--primary);">OBC Vendor App</span> - Vendor management for car parts
-11. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
-12. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
+1. <span style="color:var(--primary);">SRM Group</span> - Luxury real estate platform
+2. <span style="color:var(--primary);">Therapysala</span> - Mental wellness and therapy platform
+3. <span style="color:var(--primary);">QuickMed App</span> - Swiss telemedicine platform
+4. <span style="color:var(--primary);">Salvaging App</span> - Construction materials marketplace
+5. <span style="color:var(--primary);">Real Estate App</span> - Role-based property portal
+6. <span style="color:var(--primary);">TalkUp.AI</span> - Voice AI conversation assistant
+7. <span style="color:var(--primary);">VTiCPL App</span> - Site reporting & photo upload platform
+8. <span style="color:var(--primary);">Crystal Ice App</span> - Field staff & business tracking
+9. <span style="color:var(--primary);">Vendor App</span> - Multi-vendor management platform
+10. <span style="color:var(--primary);">Fotato App</span> - Photo sharing social platform
+11. <span style="color:var(--primary);">OBC: ObsessedByCar</span> - Car spare parts e-commerce
+12. <span style="color:var(--primary);">OBC Vendor App</span> - Vendor management for car parts
+13. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
+14. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
 `,
     experience: () => `
 💼 <span style="color:var(--primary);">Bigwon Digital Services Pvt. Ltd</span> (Jaipur) | Nov 2025 - Present
