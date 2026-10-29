@@ -437,22 +437,35 @@ document.addEventListener("DOMContentLoaded", () => {
       stack: ["Flutter", "Dart", "Node.js", "REST API", "Firebase FCM"],
       link: "https://play.google.com/store/apps/details?id=com.acunec.obc_vendor",
     },
-    fotato: {
-      title: "Fotato App",
-      badge: "Play Store",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop",
-      description:
-        "A photo-sharing platform with a smooth, responsive UI for uploading, browsing, and interacting with shared photos. Integrated Firebase for authentication, storage, and real-time content updates.",
-      highlights: [
-        "Photo-sharing platform with smooth, responsive UI for uploading and browsing photos",
-        "Firebase integration for authentication, storage, and real-time content updates",
-        "Real-time comments, likes, and user activity feed",
-        "Optimized image caching using Flutter cached_network_image",
-        "Custom photo filter application and image crop UI",
+    salon: {
+      "title": "BigWon Salon",
+      "badge": "SaaS Platform",
+      "image": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22450%22%3E%3Crect%20width%3D%22800%22%20height%3D%22450%22%20fill%3D%22%237c3aed%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22225%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2246%22%3EBigWon%20Salon%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22280%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%3EBackend%20Development%3C/text%3E%3C/svg%3E",
+      "description": "Backend development for a salon SaaS platform, contributing to the server-side application.",
+      "highlights": [
+        "Project type: SaaS",
+        "Contribution: Backend development"
       ],
-      stack: ["Flutter", "Dart", "Node.js", "Firebase", "Cloud Storage"],
-      link: "https://play.google.com/store/apps/details?id=com.fotato.user",
+      "stack": [
+        "Backend Development",
+        "SaaS"
+      ],
+      "link": "https://bigwonsalon.com/"
+    },
+    finserve: {
+      "title": "BigWon Finserve",
+      "badge": "DSA Management",
+      "image": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22800%22%20height%3D%22450%22%3E%3Crect%20width%3D%22800%22%20height%3D%22450%22%20fill%3D%22%230284c7%22/%3E%3Ctext%20x%3D%22400%22%20y%3D%22225%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2246%22%3EBigWon%20Finserve%3C/text%3E%3Ctext%20x%3D%22400%22%20y%3D%22280%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22sans-serif%22%20font-size%3D%2224%22%3EBackend%20Development%3C/text%3E%3C/svg%3E",
+      "description": "Backend development for a DSA management platform, contributing to the server-side application.",
+      "highlights": [
+        "Project type: DSA Management",
+        "Contribution: Backend development"
+      ],
+      "stack": [
+        "Backend Development",
+        "DSA Management"
+      ],
+      "link": "https://bigwonfinserve.com/"
     },
     obc: {
       title: "OBC: ObsessedByCar – Spare Parts",
@@ -635,11 +648,12 @@ document.addEventListener("DOMContentLoaded", () => {
 7. <span style="color:var(--primary);">VTiCPL App</span> - Site reporting & photo upload platform
 8. <span style="color:var(--primary);">Crystal Ice App</span> - Field staff & business tracking
 9. <span style="color:var(--primary);">Vendor App</span> - Multi-vendor management platform
-10. <span style="color:var(--primary);">Fotato App</span> - Photo sharing social platform
-11. <span style="color:var(--primary);">OBC: ObsessedByCar</span> - Car spare parts e-commerce
-12. <span style="color:var(--primary);">OBC Vendor App</span> - Vendor management for car parts
-13. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
-14. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
+10. <span style="color:var(--primary);">BigWon Salon</span> - Salon SaaS platform (backend development)
+11. <span style="color:var(--primary);">BigWon Finserve</span> - DSA management platform (backend development)
+12. <span style="color:var(--primary);">OBC: ObsessedByCar</span> - Car spare parts e-commerce
+13. <span style="color:var(--primary);">OBC Vendor App</span> - Vendor management for car parts
+14. <span style="color:var(--primary);">Zodia India</span> - Men's fashion e-commerce platform
+15. <span style="color:var(--primary);">Date Karlo</span> - Dating & matching platform
 `,
     experience: () => `
 💼 <span style="color:var(--primary);">Bigwon Digital Services Pvt. Ltd</span> (Jaipur) | Nov 2025 - Present
